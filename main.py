@@ -82,7 +82,7 @@ def tachanun_today():
                 reason_he = '')
 
     template = JINJA_ENVIRONMENT.get_template('index.html')
-    date_en = unicode(jewish_today)
+    date_en = today.strftime('%A ') + unicode(jewish_today)
     month_he = {
         JewishDate.TISHREI: 'תשרי',
         JewishDate.CHESHVAN: 'חשון',
@@ -98,8 +98,17 @@ def tachanun_today():
         JewishDate.AV: 'אב',
         JewishDate.ELUL: 'אלול',
     }[month]
+    dow_he = 'יום ' + {
+        SUN: "א'",
+        MON: "ב'",
+        TUE: "ג'",
+        WED: "ד'",
+        THU: "ה'",
+        FRI: "ו'",
+        SAT: 'שבת',
+    }[dow]
 
-    date_he = '%s %s %s' % (day, month_he, year)
+    date_he = '%s %s %s %s' % (dow_he, day, month_he, year)
     return template.render(date_en=date_en, date_he=date_he, **tachanun)
 
 def _no(en, he):
