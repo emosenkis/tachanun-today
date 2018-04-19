@@ -42,7 +42,7 @@ def tachanun_today():
     elif ((month == JewishDate.KISLEV and day >= 25)
           or (month == JewishDate.TEVET and day <= 25 + 7 - _days_in_kislev(year))):
         tachanun = _no('Channukah', 'חנוכה שמח')
-    elif month == JewishDate.SHEVAT and dat == 15:
+    elif month == JewishDate.SHEVAT and day == 15:
         tachanun = _no("Tu B'Shvat", 'ט"ו בשבט')
     elif month == JewishDate.ADAR_I and day in (14, 15):
         tachanun = _no('Purim Katan', 'פורים קטן')
