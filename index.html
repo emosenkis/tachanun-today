@@ -1,30 +1,52 @@
 <!doctype html>
 <html>
-<head>
-  <title>Is there Tachanun today? יש תחנון היום?</title>
-  <style>
-    .he { direction: rtl }
-    span.he { display: inline-block }
-    .big { font-size: 200%; }
-    .small { font-size: 80%; }
-    p { margin: 0.35em 0; }
-  </style>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-99009982-1', 'auto');
-    ga('send', 'pageview');
-  </script>
-</head>
-<body style="text-align: center">
-  <p style="color: #444">{{date_en}} &bull; <span class="he">{{date_he}}</span></p>
-  <p class="big">Is there Tachanun today?</p>
-  <p class="big he">יש תחנון היום?</p>
-  <p><b class="big">{{tachanun_en}}.</b> {{reason_en}}<br/><a href="https://ph.yhb.org.il/en/03-21-07/">Read more</a></p>
-  <p class="he"><b class="big">{{tachanun_he}}.</b> {{reason_he}}<br/><a href="https://ph.yhb.org.il/02-21-07/">קרא עוד</a></p>
-  <p style="font-size: 500%">&nbsp;</p>
-  <p class="small"><a href="https://github.com/emosenkis/tachanun-today/issues">Report a problem</a> &bull; <a class="he" href="https://github.com/emosenkis/tachanun-today/issues">דווח בעיה</a></p>
-</body>
+  <head>
+    <title>Is there Tachanun today? יש תחנון היום?</title>
+    <link rel="icon" type="image/png" href="/icon.png">
+    <style>
+.he { direction: rtl }
+span.he { display: inline-block }
+.big { font-size: 200%; }
+.small { font-size: 80%; }
+p { margin: 0.35em 0; }
+    </style>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-99009982-1', 'auto');
+ga('send', 'pageview');
+    </script>
+    <script type="application/ld+json">
+      {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Is there Tachanun today, {{date_en}}?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "<b>{{tachanun_en}}.</b> {{reason_en}}"
+        }
+      }, {
+        "@type": "Question",
+        "name": "יש תחנון היום, {{date_he}}?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text":"<b>{{tachanun_he}}.</b> {{reason_he}}"
+        }
+      }]
+    }
+    </script>
+  </head>
+  <body style="text-align: center">
+    <p style="color: #444">{{date_en}} &bull; <span class="he">{{date_he}}</span></p>
+    <p class="big">Is there Tachanun today?</p>
+    <p class="big he">יש תחנון היום?</p>
+    <p><b class="big">{{tachanun_en}}.</b> {{reason_en}}<br/><a href="https://ph.yhb.org.il/en/03-21-07/">Read more</a></p>
+    <p class="he"><b class="big">{{tachanun_he}}.</b> {{reason_he}}<br/><a href="https://ph.yhb.org.il/02-21-07/">קרא עוד</a></p>
+    <p style="font-size: 500%">&nbsp;</p>
+    <p class="small"><a href="https://github.com/emosenkis/tachanun-today/issues">Report a problem</a> &bull; <a class="he" href="https://github.com/emosenkis/tachanun-today/issues">דווח בעיה</a></p>
+  </body>
 </html>
