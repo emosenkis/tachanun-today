@@ -1,5 +1,5 @@
 # encoding=utf-8
-from __future__ import unicode_literals
+
 
 import datetime
 import jinja2
@@ -82,7 +82,7 @@ def tachanun_today():
                 reason_he = '')
 
     template = JINJA_ENVIRONMENT.get_template('index.html')
-    date_en = today.strftime('%A ') + unicode(jewish_today)
+    date_en = today.strftime('%A ') + str(jewish_today)
     month_he = {
         JewishDate.TISHREI: 'תשרי',
         JewishDate.CHESHVAN: 'חשון',

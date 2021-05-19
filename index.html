@@ -19,25 +19,25 @@ ga('create', 'UA-99009982-1', 'auto');
 ga('send', 'pageview');
     </script>
     <script type="application/ld+json">
-      {
+      {{ {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [{
         "@type": "Question",
-        "name": "Is there Tachanun today, {{date_en}}?",
+        "name": "Is there Tachanun today, " ~ date_en ~ "?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "<b>{{tachanun_en}}.</b> {{reason_en}}"
+          "text": "<b>" ~ tachanun_en ~ ".</b> " ~ reason_en,
         }
       }, {
         "@type": "Question",
-        "name": "יש תחנון היום, {{date_he}}?",
+        "name": "יש תחנון היום, " ~ date_he ~ "?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text":"<b>{{tachanun_he}}.</b> {{reason_he}}"
-        }
+          "text":"<b>" ~ tachanun_he ~ ".</b> " ~ reason_he,
+        },
       }]
-    }
+    } | tojson }}
     </script>
   </head>
   <body style="text-align: center">

@@ -1,16 +1,8 @@
-runtime: python27
-api_version: 1
-threadsafe: yes
+runtime: python37
 
 handlers:
-  - url: /icon\.png
-    static_files: icon.png
-    upload: icon.png
-  - url: .*
-    script: main.app
-
-libraries:
-  - name: jinja2
-    version: "2.6"
-  - name: markupsafe
-    version: "0.15"
+    - url: /icon\.png
+      static_files: icon.png
+      upload: icon.png
+    - url: .*
+      script: auto
